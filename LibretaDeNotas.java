@@ -206,7 +206,7 @@ public class LibretaDeNotas {
             if (registroDeNotas.containsKey(nombre))
             {
                 ArrayList<Double> notas = registroDeNotas.get(nombre);
-                System.out.println(ANSI_blanco_I + "Notas Aprobadas y Reprobadas del estudiante");
+                System.out.println(ANSI_blanco_I + "\nNotas Aprobadas y Reprobadas del estudiante");
                 for(int i = 1; i <= cantidadNotas; i++){
                     System.out.print("N°"+ i + " | ");
                 }
@@ -238,7 +238,7 @@ public class LibretaDeNotas {
         boolean MenuActivado = true;
         while (MenuActivado) {
             Scanner entrada = new Scanner(System.in);
-            System.out.println("Ingrese Nombre del estudiante");
+            System.out.println("Ingrese Nombre del estudiante\n");
             ImprimirEstudiantes(registroDeNotas);
             String nombre = entrada.nextLine();
             if (registroDeNotas.containsKey(nombre))
@@ -248,7 +248,7 @@ public class LibretaDeNotas {
                 String cadenaSimbolos = "";
 
                 ArrayList<Double> notas = registroDeNotas.get(nombre);
-                System.out.println(ANSI_blanco_I + "Notas sobre el Promedio del curso");
+                System.out.println(ANSI_blanco_I + "\nNotas sobre el Promedio del curso");
                 for(int i = 1; i <= cantidadNotas; i++){
                     System.out.print("N°"+ i + " | ");
                 }
@@ -301,15 +301,8 @@ public class LibretaDeNotas {
     public static void IngresoDeNotas(){
         Scanner sc = new Scanner(System.in);
 
-
-
-
-
-
         //pedirle al usuario que ingrese cantidad de estudiantes y cantidad de notas por alumno
         //Indica si no se ingresa un numero e indica si se ingreso una cantidad negativa
-
-
 
         while (!(cantidadAlumnos > 0)){
             System.out.println("Ingrese cantidad de estudiantes: ");
@@ -339,9 +332,6 @@ public class LibretaDeNotas {
 
         }
 
-
-
-
         sc.nextLine(); //despues de un nextInt hay que poner nextLine si quiero usar un nextLine
 
         //Captura todas las notas por cantidad de estudiante ( pregunta cantidadAlumnos veces el nombre, y por cada uno
@@ -366,7 +356,7 @@ public class LibretaDeNotas {
                 {
 
 
-                    System.out.println("Ingrese nota numero " + j + ": ");
+                    System.out.println("Ingrese nota numero " + j + " de "+ nombre + " :");
 
                     //Capturar/Obtener la Notas del estudiante con verificacion de datos
                     //Informa si se ingresa algo que no es un numero, informa si se ingresa una nota no valida en el sistema
